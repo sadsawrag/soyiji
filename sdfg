@@ -1,0 +1,26 @@
+import random
+
+def guess_color_game():    
+    print("Welcome to the Guess the Color Game!")    
+    print("I'm thinking of a color.")    
+    print("Please enter your first guess.")    
+    color = random.choice(['red', 'green', 'blue'])    
+    guesses = 0    
+    while True:    
+        print("Enter your guess: ")    
+        guess = input("Enter a guess: ").lower()    
+        if guess == color:    
+            print("Congratulations! You guessed the color in ", guesses, "guesses.")    
+            break    
+        elif guess == 'red':    
+            print("Too red. Guess again.")    
+        elif guess == 'green':    
+            print("Too green. Guess again.")    
+        elif guess == 'blue':    
+            print("Too blue. Guess again.")    
+        elif guess == '其他':    
+            print("Invalid color guess. Please enter a valid color.")    
+            continue    
+        guesses += 1
+
+guess_color_game()    
